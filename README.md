@@ -13,7 +13,7 @@
 ## Installation
 
 ```console
-pipx install "pip-wheel-diff @ https://github.com/sbidoul/pip-wheel-diff"
+pipx install pip-wheel-diff
 ```
 
 ## Usage
