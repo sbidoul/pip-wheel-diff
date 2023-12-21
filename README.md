@@ -24,7 +24,7 @@ Imagine you have to review a pull request with a diff like this in `requirements
 
 How do you verify the change is what you expect?
 
-To answer this questio, you can run `pip-wheel-diff` with two pip requirements as
+To answer this question, you can run `pip-wheel-diff` with two pip requirements as
 arguments. It will download or build the wheels, unzip them, clean them up a little bit
 for comparability and run a diff tool to compare them.
 
