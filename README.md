@@ -40,6 +40,8 @@ It tries to find a diff tool in the following order:
 - `meld`
 - `diff -r`
 
+It currently uses the `pip` executable found in path to download or build.
+
 ## License
 
 `pip-wheel-diff` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
