@@ -10,6 +10,7 @@ def clean_unpacked_wheel(path: Path) -> None:
     # remove metadata files that are not useful for diffing
     distinfo_path.joinpath("RECORD").unlink(missing_ok=True)
     distinfo_path.joinpath("direct_url.json").unlink(missing_ok=True)
+    distinfo_path.joinpath("uv_cache.json").unlink(missing_ok=True)
     # rename dist-info to name without version for comparability
     name = distinfo_path.stem.split("-")[0]
     distinfo_path.rename(path / f"{name}.dist-info")
