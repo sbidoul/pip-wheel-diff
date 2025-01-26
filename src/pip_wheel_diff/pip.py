@@ -4,8 +4,6 @@
 
 import shutil
 import subprocess
-import tempfile
-import zipfile
 from pathlib import Path
 
 
@@ -14,8 +12,5 @@ def has_pip() -> bool:
 
 
 def obtain_with_pip(spec: str, path: Path) -> None:
-    with tempfile.TemporaryDirectory() as tmpdir:
-        cmd = ["pip", "wheel", "--use-pep517", "--no-deps", spec, "--wheel-dir", tmpdir]
-        subprocess.run(cmd, check=True)  # noqa: S603
-        wheelfile = next(Path(tmpdir).glob("*.whl"))
-        zipfile.ZipFile(wheelfile).extractall(path)
+    cmd = ["pip", "install", "--use-pep517", "--no-deps", "--target", path, spec]
+    subprocess.run(cmd, check=True)  # noqa: S603
