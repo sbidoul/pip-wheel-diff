@@ -4,11 +4,7 @@
 
 import shutil
 import subprocess
-import tempfile
 from pathlib import Path
-
-from .clean import clean_unpacked_wheel
-from .diff_tool import diff_tool
 
 
 def has_uv() -> bool:
